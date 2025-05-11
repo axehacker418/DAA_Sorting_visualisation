@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SortViz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        <a class="nav-link" href="index.html">Logout</a>
+        </li>
+  </ul>
+</div>
+  </nav>
+    <div class="wrapper">
+        <!-- Main content container -->
+        <div class="main-content">
+            <!-- Algorithm Selection Section -->
+            <section id="selectionSection" class="section active selection-bg">
+                <div class="selection-container">
+                    <h1>Sorting Algorithm Visualizer</h1>
+                    <p class="description">Pick a sorting algorithm and enter numbers to see it in action!</p>
+                    <form id="sortingForm" class="form-layout" aria-labelledby="selectionSection">
+                        <div class="form-group">
+                            <label for="algorithm">Choose Algorithm:</label>
+                            <select id="algorithm" class="custom-select" aria-label="Choose sorting algorithm">
+                                <option value="bubbleSort">Bubble Sort</option>
+                                <option value="selectionSort">Selection Sort</option>
+                                <option value="insertionSort">Insertion Sort</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="numbers">Enter Numbers (comma-separated):</label>
+                            <input type="text" id="numbers" placeholder="e.g., 5, 2, 9, 1" class="input-field"
+                                aria-label="Enter numbers to sort" />
+                        </div>
+                        <button type="button" id="sortBtn" class="btn-primary">Start Sorting</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Sorting Visualization Section -->
+            <section id="visualizationSection" class="section hidden">
+                <h2>Sorting in Progress...</h2>
+                <div id="visualization"></div>
+            </section>
+
+            <!-- Result Section -->
+            <section id="resultSection" class="hidden">
+                <p id="sortedArray"></p>
+                <p id="algorithmUsed"></p>
+                <p id="finalMessage"></p>
+            </section>
+        </div>
+
+        <!-- Footer section -->
+        <footer class="footer bg-dark text-white text-center py-4">
+            <p>&copy; 2024 SortViz. Created by <span id="creator-name">Saurabh Lakshkar BETN1CS22188 </span> With great  &#10084 love </p>
+          </footer>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+  }
+  
+  /* About Section */
+  .about-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .about-section p {
+    font-size: 1.2rem;
+  }
+  
+  .play-game-section {
+    background-color: #f8f9fa;
+  }
+  
+  .footer {
+    margin-top: 50px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Customize the height of the carousel */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}

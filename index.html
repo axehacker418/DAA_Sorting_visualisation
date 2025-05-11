@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Visualization Tool</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    .algo-details {
+      display: none;
+    }
+    .flowchart-img {
+      max-height: 200px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SortViz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index1.html">Sort Now</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About Sorting Visualization</h2>
+      <p class="text-center lead mb-4">
+        Sorting Visualization Tool is an interactive application designed to help users learn and understand sorting algorithms through visualization and hands-on practice.
+      </p>
+      <div class="row mt-4">
+        <!-- Bubble Sort Section -->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow">
+            <img src="itm.png" class="card-img-top img-fluid" alt="Bubble Sort">
+            <div class="card-body">
+              <h5 class="card-title">Bubble Sort</h5>
+              <p class="card-text">Bubble Sort is a simple sorting algorithm that compares adjacent elements and swaps them if they are in the wrong order.</p>
+              <button class="btn btn-primary" onclick="toggleDetails('bubble-details')">Read More</button>
+              <div id="bubble-details" class="algo-details mt-3">
+                <h6>Why We Use It:</h6>
+                <p>Bubble Sort is primarily used for small datasets or as an educational example to demonstrate sorting concepts.</p>
+                <h6>Advantages:</h6>
+                <ul>
+                  <li>Simple to understand and implement.</li>
+                  <li>Does not require additional memory.</li>
+                </ul>
+                <h6>Disadvantages:</h6>
+                <ul>
+                  <li>Highly inefficient for large datasets.</li>
+                  <li>Time complexity of O(n²) makes it impractical for most real-world applications.</li>
+                </ul>
+                <h6>Flowchart:</h6>
+                <img src="img1.png" class="flowchart-img" alt="Bubble Sort Flowchart">
+                <h6>Time Complexity:</h6>
+                <ul>
+                  <li>Best Case: O(n) (when the array is already sorted)</li>
+                  <li>Worst and Average Case: O(n²)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Merge Sort Section -->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow">
+            <img src="itm.png" class="card-img-top img-fluid" alt="Merge Sort">
+            <div class="card-body">
+              <h5 class="card-title">Merge Sort</h5>
+              <p class="card-text">Merge Sort is a divide-and-conquer algorithm that splits the array into halves, sorts them, and merges them back.</p>
+              <button class="btn btn-primary" onclick="toggleDetails('merge-details')">Read More</button>
+              <div id="merge-details" class="algo-details mt-3">
+                <h6>Why We Use It:</h6>
+                <p>Merge Sort is ideal for large datasets and scenarios where stability and efficiency are crucial.</p>
+                <h6>Advantages:</h6>
+                <ul>
+                  <li>Stable and guarantees O(n log n) time complexity.</li>
+                  <li>Works well for linked lists and external sorting.</li>
+                </ul>
+                <h6>Disadvantages:</h6>
+                <ul>
+                  <li>Requires additional memory for temporary arrays.</li>
+                  <li>Can be slower for smaller datasets compared to Quick Sort.</li>
+                </ul>
+                <h6>Flowchart:</h6>
+                <img src="img4.png" class="flowchart-img" alt="Merge Sort Flowchart">
+                <h6>Time Complexity:</h6>
+                <ul>
+                  <li>Best, Worst, and Average Case: O(n log n)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Sort Section -->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow">
+            <img src="itm.png" class="card-img-top img-fluid" alt="Quick Sort">
+            <div class="card-body">
+              <h5 class="card-title">Quick Sort</h5>
+              <p class="card-text">Quick Sort selects a pivot element and partitions the array around it to sort recursively.</p>
+              <button class="btn btn-primary" onclick="toggleDetails('quick-details')">Read More</button>
+              <div id="quick-details" class="algo-details mt-3">
+                <h6>Why We Use It:</h6>
+                <p>Quick Sort is one of the fastest sorting algorithms, making it ideal for large datasets.</p>
+                <h6>Advantages:</h6>
+                <ul>
+                  <li>In-place sorting (no additional memory needed).</li>
+                  <li>Fast for most real-world datasets.</li>
+                </ul>
+                <h6>Disadvantages:</h6>
+                <ul>
+                  <li>Unstable (relative order of equal elements may change).</li>
+                  <li>Worst-case time complexity of O(n²) for poorly chosen pivots.</li>
+                </ul>
+                <h6>Flowchart:</h6>
+                <img src="img3.png" class="flowchart-img" alt="Quick Sort Flowchart">
+                <h6>Time Complexity:</h6>
+                <ul>
+                  <li>Best and Average Case: O(n log n)</li>
+                  <li>Worst Case: O(n²)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white text-center py-4">
+    <p>&copy; 2024 SortViz. Created by <span id="creator-name">Saurabh Lakshkar BETN1CS22188 </span> With great  &#10084 love </p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    function toggleDetails(id) {
+      const details = document.getElementById(id);
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

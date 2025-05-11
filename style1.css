@@ -1,0 +1,196 @@
+/* Ensure full height for body and HTML */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Vibrant gradient */
+    color: #f8f9fa; /* Light text for better readability */
+}
+
+/* Flexbox for body layout */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures footer stays at the bottom */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px; /* Space for navbar */
+}
+
+.nav-link {
+    color: #f8f9fa !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fdbb2d !important; /* Highlight effect */
+}
+
+/* About Section */
+.about-section {
+    padding: 40px;
+    background: linear-gradient(135deg, #1f5b57, #b68116); /* New vibrant gradient background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    text-align: center;
+    color: #ffffff; /* Light text color for better readability */
+}
+
+
+/* Card Styles */
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-title {
+    color: #ffdd00;
+    font-weight: bold;
+}
+
+/* Flowchart Image */
+.flowchart-img {
+    max-height: 200px;
+    object-fit: contain;
+    margin: 10px auto;
+    display: block;
+    border: 2px solid #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    background-color: #fdbb2d;
+    color: #1a2a6c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+button:hover {
+    background-color: #b21f1f;
+    transform: scale(1.05);
+}
+
+/* Algorithm Details Section */
+.algo-details {
+    display: none;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer styles */
+.footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f8f9fa;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer span {
+    font-weight: bold;
+    color: #fdbb2d;
+}
+
+/* Dynamic footer placement */
+body > .container {
+    flex: 1; /* Allow container to grow and push footer down */
+}
+
+.container {
+    flex-grow: 1;
+    margin-bottom: 20px; /* Space for dynamic content */
+}
+
+/* Disc controls style */
+.disc-controls {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tower styles */
+.tower {
+    width: 100px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 20px;
+    margin: 0 20px;
+}
+
+/* Disc styles */
+.disc {
+    background-color: #4CAF50;
+    height: 30px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: grab;
+    transition: all 0.3s ease;
+}
+
+.disc:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tower {
+        width: 80px;
+        height: 200px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .about-section {
+        padding: 30px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
